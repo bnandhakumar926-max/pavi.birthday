@@ -1,0 +1,749 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Pavithra ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: white;
+
+    background:
+        radial-gradient(circle at top left, #ff9a9e, transparent 35%),
+        radial-gradient(circle at bottom right, #a18cd1, transparent 35%),
+        linear-gradient(135deg, #ff5f9e, #c850c0, #4158d0);
+}
+
+/* Floating Hearts */
+
+.heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    animation: float 8s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Main */
+
+.container {
+    min-height: 100vh;
+    padding: 40px 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* Card */
+
+.card {
+    width: 100%;
+    max-width: 950px;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.15);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    border-radius: 35px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.3);
+
+    animation: appear 1.2s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Cake */
+
+.cake {
+    font-size: 90px;
+
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Heading */
+
+h1 {
+    font-size: clamp(40px,8vw,75px);
+
+    margin-top: 15px;
+
+    text-shadow:
+        0 5px 20px rgba(0,0,0,0.3);
+}
+
+.name {
+    display: block;
+
+    color: #ffe66d;
+
+    margin-top: 10px;
+}
+
+/* Subtitle */
+
+.subtitle {
+    max-width: 700px;
+
+    margin: 25px auto;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+/* Message */
+
+.message {
+    max-width: 750px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.12);
+
+    font-size: 18px;
+
+    line-height: 1.9;
+}
+
+.highlight {
+    color: #ffe66d;
+
+    font-weight: bold;
+}
+
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.gallery-title {
+    margin-top: 40px;
+
+    font-size: 30px;
+
+    color: #ffe66d;
+}
+
+.gallery {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin: 30px auto;
+}
+
+.photo-card {
+    width: 220px;
+
+    padding: 10px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.3);
+
+    transform: rotate(-2deg);
+
+    transition: 0.4s;
+}
+
+.photo-card:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+.photo-card:nth-child(3) {
+    transform: rotate(-1deg);
+}
+
+.photo-card:hover {
+    transform:
+        translateY(-12px)
+        rotate(0deg)
+        scale(1.05);
+}
+
+.photo-card img {
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    display: block;
+}
+
+.photo-caption {
+    color: #c850c0;
+
+    font-weight: bold;
+
+    padding: 12px 5px 5px;
+
+    font-size: 16px;
+}
+
+/* Wish */
+
+.wish {
+    margin: 35px 0;
+
+    color: #ffe66d;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+/* Buttons */
+
+button {
+    border: none;
+
+    padding: 16px 30px;
+
+    margin: 8px;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: #9b3c91;
+
+    background: white;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.05);
+
+    background: #ffe66d;
+}
+
+/* Surprise */
+
+#surprise {
+    display: none;
+
+    max-width: 750px;
+
+    margin: 30px auto 0;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.15);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    animation: surprise 0.8s ease;
+}
+
+@keyframes surprise {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#surprise h2 {
+    color: #ffe66d;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+#surprise p {
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+/* Confetti */
+
+.confetti {
+    position: fixed;
+
+    top: -20px;
+
+    width: 10px;
+
+    height: 10px;
+
+    z-index: 100;
+
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+/* Footer */
+
+footer {
+    margin-top: 35px;
+
+    opacity: 0.8;
+
+    font-size: 14px;
+}
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    .card {
+        padding: 35px 18px;
+    }
+
+    .cake {
+        font-size: 65px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .message {
+        font-size: 16px;
+
+        padding: 22px 18px;
+    }
+
+    .photo-card {
+        width: 90%;
+
+        max-width: 280px;
+    }
+
+    .photo-card img {
+        height: 300px;
+    }
+
+    button {
+        width: 90%;
+
+        max-width: 280px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+
+<div class="heart" style="left:5%; animation-delay:0s;">❤️</div>
+<div class="heart" style="left:15%; animation-delay:2s;">💖</div>
+<div class="heart" style="left:30%; animation-delay:4s;">💕</div>
+<div class="heart" style="left:45%; animation-delay:1s;">💗</div>
+<div class="heart" style="left:60%; animation-delay:3s;">💝</div>
+<div class="heart" style="left:75%; animation-delay:5s;">❤️</div>
+<div class="heart" style="left:90%; animation-delay:2s;">💖</div>
+
+
+<div class="container">
+
+<div class="card">
+
+    <!-- Cake -->
+
+    <div class="cake">
+        🎂
+    </div>
+
+
+    <!-- Title -->
+
+    <h1>
+
+        Happy Birthday
+
+        <span class="name">
+            Pavithra ❤️
+        </span>
+
+    </h1>
+
+
+    <p class="subtitle">
+
+        🎉 Today is a very special day
+        because an amazing person named
+        <strong>Pavithra</strong> was born! 🎉
+
+    </p>
+
+
+    <!-- Message -->
+
+    <div class="message">
+
+        💕 <span class="highlight">
+        Dear Pavithra,
+        </span> 💕
+
+        <br><br>
+
+        Wishing you a beautiful birthday
+        filled with happiness, love,
+        laughter and unforgettable memories.
+
+        <br><br>
+
+        May every dream in your heart
+        come true.
+
+        May every day bring you a new
+        reason to smile.
+
+        <br><br>
+
+        You deserve all the happiness
+        in the world. ❤️
+
+        <br><br>
+
+        Keep smiling, keep shining,
+        and always be the wonderful
+        person you are! ✨
+
+    </div>
+
+
+    <!-- =========================
+         PHOTO SECTION
+    ========================= -->
+
+    <h2 class="gallery-title">
+        📸 Beautiful Memories 📸
+    </h2>
+
+
+    <div class="gallery">
+
+        <!-- PHOTO 1 -->
+
+        <div class="photo-card">
+
+            <img
+                src="pavithra1.jpg"
+                alt="Pavithra Photo 1"
+            >
+
+            <div class="photo-caption">
+                💖 Beautiful Moment
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 2 -->
+
+        <div class="photo-card">
+
+            <img
+                src="pavithra2.jpg"
+                alt="Pavithra Photo 2"
+            >
+
+            <div class="photo-caption">
+                🌸 Sweet Memory
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 3 -->
+
+        <div class="photo-card">
+
+            <img
+                src="pavithra3.jpg"
+                alt="Pavithra Photo 3"
+            >
+
+            <div class="photo-caption">
+                ✨ Special Memory
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Birthday Wish -->
+
+    <div class="wish">
+
+        ✨ Happy Birthday, Pavithra! ✨
+
+    </div>
+
+
+    <!-- Buttons -->
+
+    <button onclick="showSurprise()">
+
+        🎁 Open Your Surprise
+
+    </button>
+
+
+    <button onclick="celebrate()">
+
+        🎉 Celebrate
+
+    </button>
+
+
+    <!-- Surprise -->
+
+    <div id="surprise">
+
+        <h2>
+            🎊 SURPRISE PAVITHRA! 🎊
+        </h2>
+
+        <p>
+
+            You are truly special! ❤️
+
+            <br><br>
+
+            May this new chapter of your life
+            be filled with wonderful adventures,
+            beautiful memories and endless happiness.
+
+            <br><br>
+
+            May your smile always shine,
+            your heart always be happy,
+            and all your dreams come true.
+
+            <br><br>
+
+            🎂 Happy Birthday once again! 🎂
+
+            <br><br>
+
+            ❤️ Keep smiling. Keep shining.
+            Keep being YOU! ❤️
+
+        </p>
+
+    </div>
+
+
+    <footer>
+
+        Made with ❤️ especially for Pavithra
+
+    </footer>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   SHOW SURPRISE
+========================= */
+
+function showSurprise() {
+
+    document.getElementById("surprise")
+        .style.display = "block";
+
+    celebrate();
+
+    setTimeout(celebrate, 500);
+
+    setTimeout(celebrate, 1000);
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function celebrate() {
+
+    const colors = [
+        "#ff4757",
+        "#ffd32a",
+        "#1e90ff",
+        "#2ed573",
+        "#ff6b81",
+        "#ffffff",
+        "#a55eea",
+        "#ff9ff3"
+    ];
+
+    for(let i = 0; i < 100; i++) {
+
+        const confetti =
+            document.createElement("div");
+
+        confetti.className =
+            "confetti";
+
+        confetti.style.left =
+            Math.random() * 100 + "vw";
+
+        confetti.style.background =
+            colors[
+                Math.floor(
+                    Math.random() * colors.length
+                )
+            ];
+
+        confetti.style.width =
+            Math.random() * 8 + 6 + "px";
+
+        confetti.style.height =
+            Math.random() * 8 + 6 + "px";
+
+        confetti.style.borderRadius =
+            Math.random() > 0.5
+            ? "50%"
+            : "2px";
+
+        confetti.style.animationDuration =
+            Math.random() * 2 + 2 + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+            confetti.remove();
+        }, 4500);
+    }
+}
+
+
+/* =========================
+   START CONFETTI
+========================= */
+
+window.addEventListener("load", function() {
+
+    setTimeout(() => {
+        celebrate();
+    }, 1000);
+
+});
+
+</script>
+
+</body>
+</html>
+```
